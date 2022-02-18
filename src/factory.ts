@@ -16,10 +16,11 @@ class AddOnFactory {
   register(type: string, addOnCreator: AddOnCreator) {
     this._addOnMap[type] = { "creator": addOnCreator };
   }
-  create(type: string, name: string) {
+  create(type: string, name: string): AddOnBase | null {
     if (type in this._addOnMap) {
-      this._addOnMap[type].creator(name)
+      return this._addOnMap[type].creator(name);
     }
+    return null;
   }
 }
 
