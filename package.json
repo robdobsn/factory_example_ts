@@ -1,0 +1,13 @@
+{
+    "name": "factory-example",
+    "version": "1.0.0",
+    "description": "Factory example",
+    "author": "Rob Dobson <rob@dobson.com>",
+    "license": "MIT",
+    "main": "./dist/app.js",
+    "types": "./dist/app.d.ts",
+    "type": "module",
+    "scripts": {
+        "start": "tsc && node ./dist/app.js"
+    }
+}
